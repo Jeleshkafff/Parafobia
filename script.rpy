@@ -21,6 +21,20 @@ image KriscloseEve:
     pause 0.2
     repeat
 
+image VaStateEve:
+    "va state.png"
+    pause 2.3
+    "va stateCl.png"
+    pause 0.3
+    repeat
+
+image KrisSadcloseEve:
+    "kr sad.png"
+    pause 2.3
+    "kr sadCl.png"
+    pause 0.2
+    repeat
+
 image PolloseEve:
     "pol hap.png"
     pause 2.0
@@ -104,7 +118,7 @@ label start:
     y "Хватит."
     p "О, музыкальные конкурсы это чудесно, я вот каждый год учавствую с группой"
     nn "Так вот ты где, Поля, вот скажи мне, тебя по всей школе надо искать?"
-    show va state at right
+    show VaStateEve at right
     nn "Взяла и убежала с репетиции, и вот не понятно что и думать"
     p "Вообще то я занимаюсь важным делом "
     nn "Ну и каким же?"
@@ -122,7 +136,7 @@ label start:
     v "Да просто хотя бы узнать где ты"
     v "Как освободишься, возвращайся"
     p "Хо-ро-шо"
-    hide va state
+    hide VaStateEve
     y "И вот это твоя музыкальная группа?"
     p "Во первых, она не моя, это наш совместный проект"
     p "Во вторых, у нас есть еще один участник, но с ним лучше не знакомится"
@@ -147,10 +161,11 @@ label start:
     o "О, а я могу записать человека на музыкальный конкурс?"
     kris "Да, конечно, нам как раз нужно больше людей"
     kris "Только главное что бы участник был согласен"
-    show kr ang at right
+    show KrisSadcloseEve at right
     kris "А то были случаи"
     p "Ладно, нам идти дальше надо, а то не успеем ничего"
-    hide kr ang
+    hide KriscloseEve
+    hide KrisSadcloseEve
 
     menu:
         p "Мы можем еще одно место посмотреть, но есть верояность опаздать или можем сразу пойти в класс"
@@ -172,6 +187,9 @@ label start:
     y "Эй..."
     y "Я не псих"
     p "Все психи так говорят"
+    y "Поль, не тебе об этом говорить"
+    p "Ч...что ты имеешь в виду?"
+    o "Не слушай ее"
     return
 
     label chose_Interes:
