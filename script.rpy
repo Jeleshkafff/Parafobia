@@ -62,6 +62,12 @@ image OlxloseEveHap:
     "ol hacl.png"
     pause 0.1
     repeat
+image PolCloseHi:
+    "pol hi.png"
+    pause 2.0
+    "pol hiCl.png"
+    pause 0.2
+    repeat
 
 
 
@@ -90,17 +96,17 @@ label start:
     y "И не называй меня так"
     show OlxloseEveHap at left
     o "Хе-хе, ничего не обещаю"
-    show pol hi
+    show PolCloseHi
     p "Приветик, вы новенькие?"
     y "Мгх, зачем так пугать?"
-    show pol state
     o "Да, мы новенькие, извини мою подругу, она просто не в настроении"
     show OlxloseEve at left
     p "Да ничего тут многие такие"
+    hide PolCloseHi
     show PolloseEve
     p "На первое время я буду вашим проводником в нашей чудесной школе"
     y "А можно мы как нибудь сами всё изучим?"
-    show pol state
+    #show pol state
     show OlxloseEveAng at left
     o "Успокойся"
     y "Опять ты со своим успокойся? Не успокоюсь я"
@@ -233,5 +239,12 @@ label start:
     "Звонок"
     y "Мне кажется нам пора бежать"
     p "Согласна"
+#     yh1
+    y "Так, а где вообще кабинет?"
+    p "Живо за мной"
+    nn "Так-так-так кто у нас тут бегает?"
+    p "Ой..."
+    nn "Ой? Полина, а почему ты не в классе"
+    p "Ну..."
 
     return
